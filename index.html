@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Révision : Le Jeûne en Islam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <div class="quiz-icon">📖</div>
+            <h1 class="quiz-title">Révision : Le Jeûne en Islam</h1>
+        </div>
+        <div class="header-actions">
+            <button class="icon-btn" onclick="toggleFullscreen()" title="Plein écran">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                </svg>
+            </button>
+            <button class="icon-btn" onclick="window.close()" title="Fermer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar-wrapper" id="progressBar"></div>
+        <div class="progress-stats">
+            <div class="question-counter">
+                <span id="currentQuestion">1</span>/<span id="totalQuestions">50</span>
+            </div>
+            <div class="score-display">
+                <div class="score-badge correct">
+                    <span>✓</span>
+                    <span id="correctCount">0</span>
+                </div>
+                <div class="score-badge incorrect">
+                    <span>✗</span>
+                    <span id="incorrectCount">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quiz-container" id="quizContainer">
+        <!-- Questions will be dynamically inserted here -->
+    </div>
+
+    <div class="results-screen" id="resultsScreen">
+        <div class="results-card">
+            <div class="results-icon" id="resultsIcon">🎉</div>
+            <h2 class="results-title">Quiz Terminé !</h2>
+            <div class="results-score" id="finalScore">0/50</div>
+            <div class="results-stats">
+                <div class="stat-item">
+                    <div class="stat-value" style="color: var(--accent-green);" id="statCorrect">0</div>
+                    <div class="stat-label">Correctes</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" style="color: var(--accent-red);" id="statIncorrect">0</div>
+                    <div class="stat-label">Incorrectes</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" style="color: var(--text-primary);" id="statPercentage">0%</div>
+                    <div class="stat-label">Pourcentage</div>
+                </div>
+            </div>
+            <button class="restart-btn" onclick="restartQuiz()">Recommencer le Quiz</button>
+        </div>
+    </div>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
